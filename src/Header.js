@@ -7,7 +7,7 @@ class Header extends Component {
     }
 
     onMouseEnter = () => {
-        this.setState({ fontSize: '40px' });
+        this.setState({ fontSize: '25px' });
     }
 
     onMouseLeave = () => {
@@ -23,8 +23,8 @@ class Header extends Component {
     render() {
         return (
             <div className="header"
-                style={this.state}
-                onMouseEnter={this.onMouseEnter}
+                style={{ ...this.state, transition:'0.3s' }}
+                //onMouseEnter={this.onMouseEnter}
                 onMouseLeave={this.onMouseLeave}
                 onClick={this.onClick}>
                 Header!
