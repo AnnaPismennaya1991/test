@@ -1,4 +1,4 @@
-// класс. компонент
+// компонент класса
 import React, { Component } from 'react';
 
 class Clicker extends Component {
@@ -6,7 +6,7 @@ class Clicker extends Component {
     state = {value: null, message: ''};
 
     add = () => {
-        let value = this.state.value || 0; //логическое сложение ||
+        let value = this.state.value || 0; //логическое сложение ||, let - переменная, значение которой можно менять
         if (value == 10) {
             return this.setState({message: ''});
         }
@@ -36,7 +36,6 @@ class Clicker extends Component {
                 <button onClick={ this.remove }> remove click </button>
                 <div> {this.state.value} </div>
                 <div> {this.state.message} </div>
-
             </div>
         );
     };
@@ -44,8 +43,9 @@ class Clicker extends Component {
 
 export default Clicker;
 
-// функц. компонент
 
+// функц. компонент
+//
 // import React from 'react';
 //
 // const Clicker = () => {
@@ -61,6 +61,5 @@ export default Clicker;
 //         </div>
 //     );
 // };
-//
 //
 // export default Clicker;
