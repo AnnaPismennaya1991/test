@@ -4,6 +4,7 @@ import Header from './Header';
 import Dropdown from './Dropdown';
 import Search from './Search';
 import Clicker from './components/clicker/Clicker';
+import Country from './components/country/Country';
 
 class App extends Component {
   render() {
@@ -15,6 +16,9 @@ class App extends Component {
             <Dropdown />
             <hr/>
             <Clicker />
+            <hr/>
+            <Country />
+            <hr/>
         </div>
     );
   }

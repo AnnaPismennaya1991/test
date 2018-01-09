@@ -7,7 +7,7 @@ class Clicker extends Component {
 
     add = () => {
         let value = this.state.value || 0; //логическое сложение ||, let - переменная, значение которой можно менять
-        if (value == 10) {
+        if (value === 10) {
             return this.setState({message: ''});
         }
         this.setState({value: ++value}); //setState - обновление state (++value==value+1)
