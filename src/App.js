@@ -5,6 +5,7 @@ import Dropdown from './Dropdown';
 import Search from './Search';
 import Clicker from './components/clicker/Clicker';
 import Country from './components/country/Country';
+import CitiesComponent from './components/table/CitiesComponent';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <hr/>
             <Country />
             <hr/>
+            <CitiesComponent />
         </div>
     );
   }

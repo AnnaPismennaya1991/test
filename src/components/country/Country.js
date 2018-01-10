@@ -40,7 +40,6 @@ class Country extends Component {
         const names = this.state.items.map ((country) => {
             return country.name;
         });
-
         return names.join(', ')
     }
 
@@ -53,6 +52,7 @@ class Country extends Component {
             );
         });
     }
+
 // Disabled - проверка
     isDisabled = () => {
         const names = this.state.items.map ((country) => {
@@ -75,7 +75,9 @@ class Country extends Component {
                 <div>
                     {this.joinCountries()}
                 </div>
-                {this.renderItems()}
+                <div>
+                    {this.renderItems()}
+                </div>
             </div>
         );
     }
