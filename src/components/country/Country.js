@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import countries from './countries';
+import './Country.css'
 
 class Country extends Component {
     state = { items:[], name:'', population:'' };
@@ -65,7 +66,7 @@ class Country extends Component {
 
     render() {
         return(
-            <div>
+            <div className='country'>
                 <h2> Countries: </h2>
                 <input placeholder='Name' type='text' onChange={this.onNameChange} />
                 <input placeholder='Population' type='number' onChange={this.onPopulationChange} />

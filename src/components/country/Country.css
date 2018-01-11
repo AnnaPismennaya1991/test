@@ -1,0 +1,35 @@
+.country {
+    font-family: Sans-Serif;
+    font-size: 20px;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+}
+
+.country input {
+    height: 20px;
+    border-radius: 7px;
+    outline: none;
+    color: black;
+    margin: 10px 0;
+}
+
+.country input:hover {
+    color: black;
+    border-color: black;
+    border-style: solid;
+    transition: 0.3s;
+}
+
+.country button {
+    height: 25px;
+    width: 120px;
+    border-radius: 7px;
+    outline: none;
+    border-color: gray;
+    border-style: solid;
+    font-size: 14px;
+    /* color: white;
+    background-color: #80DEEA;
+    font-family: Sans-Serif; */
+}

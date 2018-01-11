@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import cities from './cities';
+import './CitiesComponent.css'
 
 class CitiesComponent extends Component {
     state = { items:[], cityInfo: { city:'', country:'', yearOfFoundation:'', population:'', language:'', cinema:'', zoo:'' } };
@@ -102,7 +103,7 @@ class CitiesComponent extends Component {
 
     render() {
         return(
-            <div>
+            <div className='cities-component'>
                 <h2> Cities: </h2>
                 <input placeholder='City' type='text' onChange={(event) => this.onInputChange(event, 'city')} value={this.state.cityInfo.city} />
 
