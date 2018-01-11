@@ -58,7 +58,7 @@ class Country extends Component {
         const names = this.state.items.map ((country) => {
             return country.name;
         });
-        const isContains = names.indexOf(this.state.name) != -1;
+        const isContains = names.indexOf(this.state.name) !== -1;
 
         return this.state.name && this.state.population && !isContains ? '' : 'disable';
     }
