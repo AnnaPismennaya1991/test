@@ -104,9 +104,8 @@ class CitiesComponent extends Component {
     render() {
         return(
             <div className='cities-component'>
-                <h2> Cities: </h2>
+                <h1 className='cities-component-h1'> Cities: </h1>
                 <input placeholder='City' type='text' onChange={(event) => this.onInputChange(event, 'city')} value={this.state.cityInfo.city} />
-
                 <input placeholder='Country' type='text' onChange={(event) => this.onInputChange(event, 'country')} value={this.state.cityInfo.country}/>
                 <input placeholder='Year Of Foundation' type='number' onChange={(event) => this.onInputChange(event, 'yearOfFoundation')} value={this.state.cityInfo.yearOfFoundation}/>
                 <input placeholder='Population' type='number' onChange={(event) => this.onInputChange(event, 'population')} value={this.state.cityInfo.population}/>

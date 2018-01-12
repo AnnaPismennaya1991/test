@@ -1,5 +1,6 @@
 // компонент класса
 import React, { Component } from 'react';
+import './Clicker.css';
 
 class Clicker extends Component {
 
@@ -30,7 +31,7 @@ class Clicker extends Component {
 
     render () {
         return (
-            <div>
+            <div className='clicker'>
                 <h1> Clicker </h1>
                 <button onClick={ this.add }> add click </button>
                 <button onClick={ this.remove }> remove click </button>

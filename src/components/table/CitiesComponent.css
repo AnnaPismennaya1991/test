@@ -1,15 +1,28 @@
 .cities-component {
     font-family: Sans-Serif;
-    font-size: 20px;
+    font-size: 18px;
     border-collapse: collapse;
     text-align: left;
 }
 
+
+.cities-component-h1 {
+    font-family: Sans-Serif;
+    font-size: 26px;
+    margin: 20px;
+}
+
 .cities-component input {
+    font-size: 13px;
     height: 20px;
-    border-radius: 7px;
-    outline: none;
+    margin: 10px 2px;
     color: black;
+    outline: none;
+    border-radius: 7px;
+}
+
+.cities-component h1 + input {
+    margin-left: 20px;
 }
 
 .cities-component input:hover {
@@ -20,16 +33,22 @@
 }
 
 .cities-component button {
+    font-family: Sans-Serif;
+    font-size: 15px;
+    margin: 10px 2px;
     height: 25px;
     width: 120px;
     border-radius: 7px;
-    outline: none;
     border-color: gray;
     border-style: solid;
-    font-size: 14px;
-    /* color: white;
+    outline: none;
+    color: white;
     background-color: #80DEEA;
-    font-family: Sans-Serif; */
+}
+
+.cities-component button:hover {
+    background-color: #B2EBF2;
+    transition: 0.3s;
 }
 
 .cities-component table,
@@ -41,7 +60,7 @@
     border-width: 0 1px 1px 0;
     border-color: white;
     padding: 10px;
-    margin: 30px 10px;
+    margin: 20px 20px;
     max-width: 100%;
     background: #B2EBF2;
 }

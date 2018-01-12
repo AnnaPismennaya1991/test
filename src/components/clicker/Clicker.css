@@ -1,0 +1,22 @@
+.clicker {
+    font-family: Sans-Serif;
+    font-size: 14px;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+    line-height: 1.5;
+}
+
+.clicker button {
+    font-family: Sans-Serif;
+    font-size: 15px;
+    height: 25px;
+    width: 120px;
+    border-radius: 7px;
+    border-color: gray;
+    border-style: solid;
+    outline: none;
+    color: white;
+    background-color: #80DEEA;
+    margin: 10px 2px;
+}

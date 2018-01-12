@@ -73,7 +73,7 @@ class Country extends Component {
                 <button onClick={this.push} disabled={this.isDisabled()}> Push </button>
                 <button onClick={this.unshift} disabled={this.isDisabled()}> Unshift </button>
                 <button onClick={this.reverse}> Reverse </button>
-                <div>
+                <div className='joinCountries'>
                     {this.joinCountries()}
                 </div>
                 <div>

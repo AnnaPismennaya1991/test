@@ -1,17 +1,26 @@
+/* весь массив Countries */
 .country {
     font-family: Sans-Serif;
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
     padding: 10px;
     margin: 10px;
+    line-height: 1.5;
 }
 
+/* страны в строке */
+.country .joinCountries {
+    font-size: 24px;
+    padding: 10px 10px 10px 0;
+}
+/* input - поля ввода */
 .country input {
+    font-size: 13px;
     height: 20px;
-    border-radius: 7px;
-    outline: none;
+    margin: 10px 2px;
     color: black;
-    margin: 10px 0;
+    outline: none;
+    border-radius: 7px;
 }
 
 .country input:hover {
@@ -21,15 +30,22 @@
     transition: 0.3s;
 }
 
+/* кнопки push, unshift, reverse */
 .country button {
+    font-family: Sans-Serif;
+    font-size: 15px;
+    margin: 10px 2px;
     height: 25px;
     width: 120px;
     border-radius: 7px;
-    outline: none;
     border-color: gray;
     border-style: solid;
-    font-size: 14px;
-    /* color: white;
+    outline: none;
+    color: white;
     background-color: #80DEEA;
-    font-family: Sans-Serif; */
+}
+
+.country button:hover {
+    background-color: #B2EBF2;
+    transition: 0.3s;
 }
