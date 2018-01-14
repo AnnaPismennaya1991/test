@@ -16,6 +16,13 @@ class CitiesComponent extends Component {
         this.setState({ cityInfo });
     }
 
+    delete = (id) => {
+        const items = this.state.items.filter((item) => {
+            return item.id !== id;
+        });
+        this.setState({items});
+    }
+
     // onCityChange = (event) => {
     //     this.setState ({city: event.target.value });
     // }
@@ -96,6 +103,8 @@ class CitiesComponent extends Component {
                     <td>{ item.language }</td>
                     <td>{ `${item.cinema}` }</td>
                     <td>{ `${item.zoo}` }</td>
+                    <td className='link'>edit</td>
+                    <td className='link' onClick={(event) => this.delete(item.id)}>delete</td>
                 </tr>
             );
         });
@@ -124,6 +133,8 @@ class CitiesComponent extends Component {
                             <th>Language</th>
                             <th>Cinema</th>
                             <th>Zoo</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>

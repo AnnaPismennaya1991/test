@@ -76,3 +76,7 @@
 .cities-component td:first-child {
     text-align: left;
 }
+
+.cities-component .link {
+    cursor: pointer;
+}
