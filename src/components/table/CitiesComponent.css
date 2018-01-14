@@ -80,3 +80,7 @@
 .cities-component .link {
     cursor: pointer;
 }
+
+.cities-component .table-checkbox {
+    margin: 0 20px;
+}

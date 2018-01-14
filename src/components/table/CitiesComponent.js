@@ -23,6 +23,46 @@ class CitiesComponent extends Component {
         this.setState({items});
     }
 
+    edit = (item) => {
+        this.setState({ cityInfo: item, isEditing: true });
+    }
+
+    save = () => {
+        this.setState({
+            isEditing: false,
+            cityInfo: { city:'', country:'', yearOfFoundation:'', population:'', language:'', cinema:'', zoo:'' }
+        });
+    }
+
+    filterZoo = (event) => {
+        if (!event.target.checked ) {
+            return this.setState({ items: cities });
+        }
+
+        const items = cities.filter((item) => {
+            return item.zoo === event.target.checked;
+        });
+        this.setState({items});
+    }
+
+    filterCinema = (event) => {
+        if (!event.target.checked ) {
+            return this.setState({ items: cities });
+        }
+
+        const items = cities.filter((item) => {
+            return item.cinema === event.target.checked;
+        });
+        this.setState({items});
+    }
+
+    onSelectChange = (event) => {
+        const items = cities.filter((item) => {
+            return item.language === event.target.value;
+        });
+        this.setState({items});
+    }
+
     // onCityChange = (event) => {
     //     this.setState ({city: event.target.value });
     // }
@@ -103,7 +143,7 @@ class CitiesComponent extends Component {
                     <td>{ item.language }</td>
                     <td>{ `${item.cinema}` }</td>
                     <td>{ `${item.zoo}` }</td>
-                    <td className='link'>edit</td>
+                    <td className='link' onClick={(event) => this.edit(item)}>edit</td>
                     <td className='link' onClick={(event) => this.delete(item.id)}>delete</td>
                 </tr>
             );
@@ -117,12 +157,38 @@ class CitiesComponent extends Component {
                 <input placeholder='City' type='text' onChange={(event) => this.onInputChange(event, 'city')} value={this.state.cityInfo.city} />
                 <input placeholder='Country' type='text' onChange={(event) => this.onInputChange(event, 'country')} value={this.state.cityInfo.country}/>
                 <input placeholder='Year Of Foundation' type='number' onChange={(event) => this.onInputChange(event, 'yearOfFoundation')} value={this.state.cityInfo.yearOfFoundation}/>
-                <input placeholder='Population' type='number' onChange={(event) => this.onInputChange(event, 'population')} value={this.state.cityInfo.population}/>
+                <input placeholder='Population' type='text' onChange={(event) => this.onInputChange(event, 'population')} value={this.state.cityInfo.population}/>
                 <input placeholder='Language' type='text' onChange={(event) => this.onInputChange(event, 'language')} value={this.state.cityInfo.language}/>
                 <input placeholder='Cinema' type='bool' onChange={(event) => this.onInputChange(event, 'cinema')} value={this.state.cityInfo.cinema}/>
                 <input placeholder='Zoo' type='bool' onChange={(event) => this.onInputChange(event, 'zoo')} value={this.state.cityInfo.zoo}/>
-                <button onClick={this.push}> Push </button>
-                <button onClick={this.unshift}> Unshift </button>
+                { !this.state.isEditing &&
+                    <span>
+                        <button onClick={this.push}> Push </button>
+                        <button onClick={this.unshift}> Unshift </button>
+                    </span>
+                }
+
+                { this.state.isEditing &&
+                        <button onClick={this.save}> Save </button>
+                }
+                <div className='table-checkbox'>
+                    <div>
+                        <input type='checkbox' onChange={(event) => this.filterZoo(event)}/>
+                        <label> Zoo </label>
+                    </div>
+                    <div>
+                        <input type='checkbox' onChange={(event) => this.filterCinema(event)}/>
+                        <label> Cinema </label>
+                    </div>
+                    <select onChange={ this.onSelectChange}>
+                        <option value='russian'>Russian</option>
+                        <option value='ukrainian'>Ukrainian</option>
+                        <option value='spanish'>Spanish</option>
+                        <option value='belarusian'>Belarusian</option>
+                    </select>
+                </div>
+
+
                 <table style={{ border: '1px solid #dcdcdc' }}>
                     <thead>
                         <tr>
@@ -141,6 +207,8 @@ class CitiesComponent extends Component {
                         {this.renderRows()}
                     </tbody>
                 </table>
+
+                {this.state.items.length} / {cities.length}
             </div>
         );
     }

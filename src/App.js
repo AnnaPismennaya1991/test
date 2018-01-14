@@ -21,6 +21,7 @@ class App extends Component {
             <Country />
             <hr/>
             <CitiesComponent />
+            <hr/>
         </div>
     );
   }
