@@ -11,10 +11,10 @@ class App extends Component {
   render() {
     return (
         <div className="app">
-            Hello, World!
+            <div className="App_title"> Hello, World! </div>
             <Search />
-            <Header />
-            <Dropdown />
+            {/* <Header />
+            <Dropdown /> */}
             <hr/>
             <Clicker />
             <hr/>

@@ -16,3 +16,9 @@
 .App-intro {
   font-size: large;
 }
+
+.App_title {
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 20px;
+}

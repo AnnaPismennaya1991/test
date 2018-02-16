@@ -13,7 +13,6 @@ class Dropdown extends Component {
     render() {
         return (
             <div className="dropdown-component" style={this.state} onClick={this.onClick}>
-                Dropdown-component!
             </div>
         );
     }

@@ -1,0 +1,15 @@
+.search input {
+    border-radius: 7px;
+    font-size: 15px;
+    width:  250px;
+    outline: none;
+    height: 25px;
+    margin: 20px;
+    color: black;
+}
+
+.text {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 15px;
+}

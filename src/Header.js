@@ -27,7 +27,6 @@ class Header extends Component {
                 //onMouseEnter={this.onMouseEnter}
                 onMouseLeave={this.onMouseLeave}
                 onClick={this.onClick}>
-                Header!
             </div>
         );
     }

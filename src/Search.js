@@ -16,7 +16,7 @@ class Search extends Component {
         return (
             <div className='search'>
                 <input onChange={this.onChange}/>
-                <div>{this.state.value}</div>
+                <div className='text'>{this.state.value}</div>
             </div>
         );
     }
